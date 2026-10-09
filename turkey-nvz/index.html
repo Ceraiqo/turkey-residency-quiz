@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВНЖ в Турции для граждан России и Беларуси</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">Turkey Residency</div>
+                <div class="header-contacts">
+                    <a href="https://t.me/+79958881851" class="contact-link">
+                        <span class="contact-icon">✈</span>
+                        +7(995)8881851
+                    </a>
+                    <a href="tel:+905468389033" class="contact-link">
+                        <span class="contact-icon">📱</span>
+                        +90(546)8389033
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">ОФОРМЛЕНИЕ ВИДА НА ЖИТЕЛЬСТВО В ТУРЦИИ ДЛЯ ГРАЖДАН РОССИИ И БЕЛАРУСИ</h1>
+            <p class="hero-subtitle fade-in">Узнай точную стоимость ВНЖ под Ваши задачи за 45 секунд</p>
+            <button class="btn btn-primary hero-btn fade-in" onclick="scrollToQuiz()">Начать опрос</button>
+        </div>
+    </section>
+
+    <!-- Блок квиза -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <div class="quiz-container fade-in">
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <div class="quiz-step" id="step1">
+                    <h2 class="quiz-question">Какие у Вас планы на переезд? <span class="question-hint">(можно выбрать несколько)</span></h2>
+                    <div class="quiz-options">
+                        <label class="quiz-option checkbox-option">
+                            <input type="checkbox" name="plans" value="citizenship">
+                            <span class="option-text">Хочу второе гражданство</span>
+                        </label>
+                        <label class="quiz-option checkbox-option">
+                            <input type="checkbox" name="plans" value="business">
+                            <span class="option-text">Намерен открыть бизнес</span>
+                        </label>
+                        <label class="quiz-option checkbox-option">
+                            <input type="checkbox" name="plans" value="relocation">
+                            <span class="option-text">Планирую переезд</span>
+                        </label>
+                        <label class="quiz-option checkbox-option">
+                            <input type="checkbox" name="plans" value="future-citizenship">
+                            <span class="option-text">Позже хочу получить гражданство</span>
+                        </label>
+                        <label class="quiz-option checkbox-option">
+                            <input type="checkbox" name="plans" value="accounts">
+                            <span class="option-text">Нужны счета, карты, связь</span>
+                        </label>
+                        <label class="quiz-option checkbox-option">
+                            <input type="checkbox" name="plans" value="travel">
+                            <span class="option-text">Нужно перемещаться по миру и без проблем получать визы</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary quiz-btn" onclick="nextStep()">Далее</button>
+                </div>
+
+                <div class="quiz-step" id="step2" style="display: none;">
+                    <h2 class="quiz-question">ВНЖ нужно для Вас или для всех членов семьи?</h2>
+                    <div class="quiz-options">
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="family" value="single">
+                            <span class="option-text">Только для меня</span>
+                        </label>
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="family" value="couple">
+                            <span class="option-text">Для меня и супруги(а)</span>
+                        </label>
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="family" value="one-child">
+                            <span class="option-text">Для меня, супруги(а) и ребенка</span>
+                        </label>
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="family" value="two-children">
+                            <span class="option-text">Для меня, супруги(а) и двоих детей</span>
+                        </label>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary quiz-btn" onclick="prevStep()">Назад</button>
+                        <button class="btn btn-primary quiz-btn" onclick="nextStep()">Далее</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" id="step3" style="display: none;">
+                    <h2 class="quiz-question">Ранее получали ВНЖ?</h2>
+                    <div class="quiz-options">
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="previous-residence" value="turkey">
+                            <span class="option-text">Да, в Турции</span>
+                        </label>
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="previous-residence" value="eu">
+                            <span class="option-text">Да, в ЕС</span>
+                        </label>
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="previous-residence" value="other">
+                            <span class="option-text">Да, в других странах</span>
+                        </label>
+                        <label class="quiz-option radio-option">
+                            <input type="radio" name="previous-residence" value="no">
+                            <span class="option-text">Нет</span>
+                        </label>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary quiz-btn" onclick="prevStep()">Назад</button>
+                        <button class="btn btn-primary quiz-btn" onclick="nextStep()">Далее</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" id="step4" style="display: none;">
+                    <h2 class="quiz-question">Ваш результат</h2>
+                    <div class="quiz-result">
+                        <div class="result-price" id="resultPrice">Стоимость под ключ: 2000 евро</div>
+                        <div class="result-time">Срок оформления: 11 дней</div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary quiz-btn">Получить полный список документов</button>
+                    </form>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary quiz-btn" onclick="prevStep()">Назад</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок преимуществ -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title fade-in">Почему выбирают нас</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card fade-in">
+                    <div class="advantage-icon">📄</div>
+                    <h3>Работаем по договору</h3>
+                    <p>Официальное сотрудничество с полной юридической гарантией</p>
+                </div>
+                <div class="advantage-card fade-in">
+                    <div class="advantage-icon">🔒</div>
+                    <h3>Все официально и безопасно</h3>
+                    <p>Полное соблюдение законодательства Турции</p>
+                </div>
+                <div class="advantage-card fade-in">
+                    <div class="advantage-icon">📋</div>
+                    <h3>Сами готовим все документы</h3>
+                    <p>Берем на себя всю бюрократию</p>
+                </div>
+                <div class="advantage-card fade-in">
+                    <div class="advantage-icon">📅</div>
+                    <h3>Назначим оформление</h3>
+                    <p>Запишем на удобное время</p>
+                </div>
+                <div class="advantage-card fade-in">
+                    <div class="advantage-icon">👤</div>
+                    <h3>Нужен только один личный визит</h3>
+                    <p>Остальное сделаем удаленно</p>
+                </div>
+                <div class="advantage-card fade-in">
+                    <div class="advantage-icon">🏙️</div>
+                    <h3>Оформление в городах</h3>
+                    <p>Мерсин, Анталия, Алания, Стамбул</p>
+                </div>
+            </div>
+            <div class="requirements fade-in">
+                <h3>Для оформления нужно:</h3>
+                <p>Загранпаспорт и фотографии</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <a href="https://t.me/+79958881851" class="footer-contact">
+                        <span class="contact-icon">✈</span>
+                        +7(995)8881851
+                    </a>
+                    <a href="tel:+905468389033" class="footer-contact">
+                        <span class="contact-icon">📱</span>
+                        +90(546)8389033
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h3>Услуги</h3>
+                    <a href="#quiz" class="footer-link">Расчет стоимости ВНЖ</a>
+                    <a href="#quiz" class="footer-link">Консультация</a>
+                    <a href="#quiz" class="footer-link">Подготовка документов</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Turkey Residency. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
